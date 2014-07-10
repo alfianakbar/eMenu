@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+    <ListView
+        android:id="@+id/listkategori"
+        android:layout_width="300dip"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:listSelector="@drawable/listitem_selector">
+
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+		<LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+			<RadioGroup
+			    android:id="@+id/radioGroup1"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent" 
+			    android:orientation="horizontal">
+
+			    <ToggleButton
+			    	android:id="@+id/toggleBestSeller"
+			    	android:layout_width="wrap_content"
+			    	android:layout_height="wrap_content"
+			    	android:layout_weight="1"
+			    	android:textOn="Best Seller"
+			    	android:textOff="Best Seller"
+			    	android:checked="true"
+			    	android:onClick="onToggle"/>
+
+				<ToggleButton
+			    	android:id="@+id/toggleTopRated"
+			    	android:layout_width="wrap_content"
+			    	android:layout_height="wrap_content"
+			    	android:layout_weight="1"
+			    	android:textOn="Top Rated"
+			    	android:onClick="onToggle"
+			    	android:textOff="Top Rated" />
+
+				<ToggleButton
+			    	android:id="@+id/toggleCheap"
+			    	android:layout_width="wrap_content"
+			    	android:layout_height="wrap_content"
+			    	android:layout_weight="1"
+			    	android:onClick="onToggle"
+			    	android:textOn="Low Price"
+			    	android:textOff="Low Price" />
+			</RadioGroup>
+
+        </LinearLayout>
+        <GridView
+            android:id="@+id/listMenu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:numColumns="3"
+            android:focusable="true">
+        </GridView>
+
+        
+
+    </LinearLayout>
+
+</LinearLayout>
